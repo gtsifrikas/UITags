@@ -32,7 +32,7 @@ import UICollectionViewLeftAlignedLayout
         self.tags = ["This", "is","a", "demo","for", "storyboard",".", "Please","make", "an","outlet", "and", "specify", "your", "own", "tags"]
     }
     
-    var delegate:UITagsViewDelegate?
+    public var delegate:UITagsViewDelegate?
     
     public var tags:[String] = [] {
         didSet {
@@ -139,7 +139,7 @@ import UICollectionViewLeftAlignedLayout
     }
 }
 
-extension Array where Element: Equatable {
+private extension Array where Element: Equatable {
     mutating func removeObject(object: Element) {
         if let index = self.indexOf(object) {
             self.removeAtIndex(index)
@@ -153,7 +153,7 @@ extension Array where Element: Equatable {
     }
 }
 
-protocol UITagsViewDelegate {
+public protocol UITagsViewDelegate {
     func tagSelected(atIndex index:Int) -> Void
     func tagDeselected(atIndex index:Int) -> Void
 }

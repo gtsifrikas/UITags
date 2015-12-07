@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UITags
 
 class ViewController: UIViewController, UITagsViewDelegate {
 
@@ -14,7 +15,7 @@ class ViewController: UIViewController, UITagsViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tags.delegate = self
-        self.tags.tags = ["These", "are", "some", "tags"]
+        self.tags.tags = ["These", "are", "some", "tags","These", "are", "some", "tags","These", "are", "some", "tags","These", "are", "some", "tags","These", "are", "some", "tags"]
     }
 
     override func didReceiveMemoryWarning() {

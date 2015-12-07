@@ -30,6 +30,8 @@
 /* Begin PBXFileReference section */
 		418EB7086AE61B26BC908365 /* Pods-UITags_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITags_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITags_Example/Pods-UITags_Example.release.xcconfig"; sourceTree = "<group>"; };
 		49BA019B821C5EB41C87CD3C /* Pods-UITags_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITags_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITags_Tests/Pods-UITags_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4A44229A1C15A7E4006280CB /* UITags.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UITags.framework; path = "Pods/../build/Debug-iphoneos/UITags.framework"; sourceTree = "<group>"; };
+		4A44229C1C15A807006280CB /* UITags.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UITags.framework; path = "Pods/../build/Debug-iphoneos/UITags.framework"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UITags_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITags_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		161329918CB48CD6C6F17676 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A44229C1C15A807006280CB /* UITags.framework */,
+				4A44229A1C15A7E4006280CB /* UITags.framework */,
 				62090D4B93C56D1EA4A172B0 /* Pods_UITags_Example.framework */,
 				E47AAB1F059F29DE2AE675A0 /* Pods_UITags_Tests.framework */,
 			);
@@ -488,9 +492,14 @@
 			baseConfigurationReference = F9299D0E993A91AAF108349C /* Pods-UITags_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = UITags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "gtsifrikas.demo.UITags-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -500,9 +509,14 @@
 			baseConfigurationReference = 418EB7086AE61B26BC908365 /* Pods-UITags_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = UITags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "gtsifrikas.demo.UITags-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
