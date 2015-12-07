@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'UITags_Example', :exclusive => true do
+  pod "UITags", :path => "../"
+end
+
+target 'UITags_Tests', :exclusive => true do
+  pod "UITags", :path => "../"
+
+  pod 'FBSnapshotTestCase'
+end
