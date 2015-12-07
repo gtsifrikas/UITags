@@ -1,0 +1,24 @@
+PODS:
+  - FBSnapshotTestCase (2.0.7):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.7)
+  - FBSnapshotTestCase/Core (2.0.7)
+  - FBSnapshotTestCase/SwiftSupport (2.0.7):
+    - FBSnapshotTestCase/Core
+  - UICollectionViewLeftAlignedLayout (1.0.1)
+  - UITags (0.1.0):
+    - UICollectionViewLeftAlignedLayout
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - UITags (from `../`)
+
+EXTERNAL SOURCES:
+  UITags:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
+  UICollectionViewLeftAlignedLayout: 6d10790db3e07958d91bd910d8b8e9dad952b1ef
+  UITags: 2a696883f30bc681028bdd59851cbae03ddfeda7
+
+COCOAPODS: 0.39.0

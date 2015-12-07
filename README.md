@@ -1,10 +1,5 @@
 # UITags
 
-[![CI Status](http://img.shields.io/travis/Tsif/UITags.svg?style=flat)](https://travis-ci.org/Tsif/UITags)
-[![Version](https://img.shields.io/cocoapods/v/UITags.svg?style=flat)](http://cocoapods.org/pods/UITags)
-[![License](https://img.shields.io/cocoapods/l/UITags.svg?style=flat)](http://cocoapods.org/pods/UITags)
-[![Platform](https://img.shields.io/cocoapods/p/UITags.svg?style=flat)](http://cocoapods.org/pods/UITags)
-
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -22,7 +17,7 @@ pod "UITags"
 
 ## Author
 
-Tsif, gtsifrikas@gmail.com
+George Tsifrikas, gtsifrikas@gmail.com
 
 ## License
 

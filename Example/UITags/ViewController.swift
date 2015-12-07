@@ -8,16 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITagsViewDelegate {
 
+    @IBOutlet weak var tags: UITags!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.tags.delegate = self
+        self.tags.tags = ["These", "are", "some", "tags"]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tagSelected(atIndex index:Int) -> Void {
+        print("Tag at index:\(index) selected")
+    }
+    
+    func tagDeselected(atIndex index:Int) -> Void {
+        print("Tag at index:\(index) deselected")
     }
 
 }
