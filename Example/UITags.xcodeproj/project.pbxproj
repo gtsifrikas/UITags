@@ -32,6 +32,7 @@
 		49BA019B821C5EB41C87CD3C /* Pods-UITags_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITags_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITags_Tests/Pods-UITags_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4A44229A1C15A7E4006280CB /* UITags.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UITags.framework; path = "Pods/../build/Debug-iphoneos/UITags.framework"; sourceTree = "<group>"; };
 		4A44229C1C15A807006280CB /* UITags.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UITags.framework; path = "Pods/../build/Debug-iphoneos/UITags.framework"; sourceTree = "<group>"; };
+		4A44229E1C16E12C006280CB /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UITags_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITags_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				4A44229E1C16E12C006280CB /* sample.png */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for UITags */,
 				607FACE81AFB9204008FA782 /* Tests */,

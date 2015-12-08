@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITagsViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tags.delegate = self
-        self.tags.tags = ["These", "are", "some", "tags","These", "are", "some", "tags","These", "are", "some", "tags","These", "are", "some", "tags","These", "are", "some", "tags"]
+        self.tags.tags = ["These", "are", "some", "tags","Please", "specify", "an", "outlet","and", "also", "set", "the","delegate", "if", "you", "want","to", "be", "tappable"]
     }
 
     override func didReceiveMemoryWarning() {

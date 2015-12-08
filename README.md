@@ -1,5 +1,8 @@
 # UITags
 
+## Screenshot
+![Sample](http://i.imgur.com/ez1wrgc.png)
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
