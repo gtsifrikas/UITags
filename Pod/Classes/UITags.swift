@@ -9,38 +9,39 @@
 import UIKit
 import UICollectionViewLeftAlignedLayout
 
-@IBDesignable public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+@IBDesignable 
+public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    @IBInspectable var tagColor:UIColor?
-    @IBInspectable var tagSelectedColor:UIColor?
+    @IBInspectable var tagColor: UIColor?
+    @IBInspectable var tagSelectedColor: UIColor?
     
     @IBInspectable var fontSize: CGFloat = 11.0
-    @IBInspectable var fontFamily: String = "System"
-    @IBInspectable var textColor:UIColor?
-    @IBInspectable var textColorSelected:UIColor?
+    @IBInspectable var fontFamily = "System"
+    @IBInspectable var textColor: UIColor?
+    @IBInspectable var textColorSelected: UIColor?
     
-    @IBInspectable var tagHorizontalDistance:CGFloat = 2
-    @IBInspectable var tagVerticalDistance:CGFloat = 3
+    @IBInspectable var tagHorizontalDistance: CGFloat = 2
+    @IBInspectable var tagVerticalDistance: CGFloat = 3
     
-    @IBInspectable var horizontalPadding:CGFloat = 3
-    @IBInspectable var verticalPadding:CGFloat = 2
+    @IBInspectable var horizontalPadding: CGFloat = 3
+    @IBInspectable var verticalPadding: CGFloat = 2
     
-    private var collectionView:UICollectionView?
+    private var collectionView: UICollectionView?
 
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.tags = ["This", "is","a", "demo","for", "storyboard",".", "Please","make", "an","outlet", "and", "specify", "your", "own", "tags"]
     }
     
-    public var delegate:UITagsViewDelegate?
+    public var delegate: UITagsViewDelegate?
     
-    public var tags:[String] = [] {
+    public var tags: [String] = [] {
         didSet {
             self.createTags()
         }
     }
     
-    private var selectedTags:[Int] = []
+    private var selectedTags = [Int]()
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -53,24 +54,25 @@ import UICollectionViewLeftAlignedLayout
     }
     
     private func setUp() {
-//        let standardLayout = UICollectionViewFlowLayout()
-        self.collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: UICollectionViewLeftAlignedLayout())
-        self.collectionView!.delegate = self
-        self.collectionView!.dataSource = self
-        self.collectionView!.showsHorizontalScrollIndicator = false
-        self.collectionView!.showsVerticalScrollIndicator = false
-        self.collectionView?.backgroundColor = UIColor.clearColor()
-        self.collectionView!.registerClass(UITagCollectionViewCell.self, forCellWithReuseIdentifier: "tagCell")
-        self.addSubview(self.collectionView!)
+        collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: UICollectionViewLeftAlignedLayout())
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        collectionView?.showsHorizontalScrollIndicator = false
+        collectionView?.showsVerticalScrollIndicator = false
+        collectionView?.backgroundColor = UIColor.clearColor()
+        collectionView?.registerClass(UITagCollectionViewCell.self, forCellWithReuseIdentifier: "tagCell")
+        if let collectionView = collectionView {
+            self.addSubview(collectionView)
+        }
     }
     
     private func createTags() {
-        self.collectionView?.reloadData()
+        collectionView?.reloadData()
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.collectionView?.frame = self.bounds
+        collectionView?.frame = bounds
     }
     
     //MARK: - collection view dataSource implemantation
@@ -83,7 +85,10 @@ import UICollectionViewLeftAlignedLayout
     }
     
     private func configureCell(cell: UICollectionViewCell, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cellToConfigure = cell as! UITagCollectionViewCell
+        guard let cellToConfigure = cell as? UITagCollectionViewCell else {
+            print("Could not load UITagCollectionViewCell..")
+            return UICollectionViewCell()
+        }
         cellToConfigure.fontFamily = self.fontFamily
         cellToConfigure.fontSize = self.fontSize
         cellToConfigure.textColor = self.selectedTags.contains(indexPath.row) ? self.textColorSelected : self.textColor
@@ -121,7 +126,7 @@ import UICollectionViewLeftAlignedLayout
     }
     
     public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsetsZero
     }
     
     //MARK: - collection view delegate implementation
