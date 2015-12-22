@@ -10,7 +10,7 @@ import UIKit
 
 class UITagCollectionViewCell: UICollectionViewCell {
     
-    var title:String = "" {
+    var title = "" {
         didSet {
             self.titleLabelRef?.font = UIFont(name: fontFamily, size: fontSize)
             self.titleLabelRef?.textColor = textColor
@@ -19,10 +19,10 @@ class UITagCollectionViewCell: UICollectionViewCell {
         }
     }
     var fontSize: CGFloat = 11.0
-    var fontFamily: String = "System"
-    var textColor:UIColor?
+    var fontFamily = "System"
+    var textColor: UIColor?
     
-    private weak var titleLabelRef:UILabel?
+    private weak var titleLabelRef: UILabel?
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -40,17 +40,18 @@ class UITagCollectionViewCell: UICollectionViewCell {
     }
     
     func setup() {
-        let titleLabel = UILabel(frame: self.bounds)
-        self.titleLabelRef = titleLabel
-        self.titleLabelRef?.font = UIFont(name: fontFamily, size: fontSize)
-        self.titleLabelRef?.textColor = textColor
-        self.titleLabelRef?.textAlignment = .Center
-        self.contentView.addSubview(titleLabel)
-        self.contentView.layer.cornerRadius = 3
+        titleLabelRef = UILabel(frame: bounds)
+        titleLabelRef?.font = UIFont(name: fontFamily, size: fontSize)
+        titleLabelRef?.textColor = textColor
+        titleLabelRef?.textAlignment = .Center
+        if let titleLabelRef = titleLabelRef {
+            contentView.addSubview(titleLabelRef)
+        }
+        contentView.layer.cornerRadius = 3
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.titleLabelRef?.frame = self.bounds
+        titleLabelRef?.frame = bounds
     }
 }
