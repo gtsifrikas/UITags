@@ -40,13 +40,12 @@ class UITagCollectionViewCell: UICollectionViewCell {
     }
     
     func setup() {
-        titleLabelRef = UILabel(frame: bounds)
+        let titleLabel = UILabel(frame: bounds)
+        titleLabelRef = titleLabel
         titleLabelRef?.font = UIFont(name: fontFamily, size: fontSize)
         titleLabelRef?.textColor = textColor
         titleLabelRef?.textAlignment = .Center
-        if let titleLabelRef = titleLabelRef {
-            contentView.addSubview(titleLabelRef)
-        }
+        contentView.addSubview(titleLabel)
         contentView.layer.cornerRadius = 3
     }
     
