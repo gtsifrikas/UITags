@@ -21,6 +21,7 @@ class UITagCollectionViewCell: UICollectionViewCell {
     var fontSize: CGFloat = 11.0
     var fontFamily = "System"
     var textColor: UIColor?
+    var cornerRadius: CGFloat = 3.0
     
     private weak var titleLabelRef: UILabel?
     
@@ -46,11 +47,11 @@ class UITagCollectionViewCell: UICollectionViewCell {
         titleLabelRef?.textColor = textColor
         titleLabelRef?.textAlignment = .Center
         contentView.addSubview(titleLabel)
-        contentView.layer.cornerRadius = 3
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         titleLabelRef?.frame = bounds
+        contentView.layer.cornerRadius = cornerRadius
     }
 }
