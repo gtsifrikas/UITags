@@ -26,6 +26,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     @IBInspectable public var horizontalPadding: CGFloat = 3
     @IBInspectable public var verticalPadding: CGFloat = 2
     
+    @IBInspectable public var tagCornerRadius: CGFloat = 3
     
     private var collectionView: UICollectionView?
     
