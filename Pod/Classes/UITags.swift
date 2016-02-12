@@ -26,8 +26,16 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     @IBInspectable public var horizontalPadding: CGFloat = 3
     @IBInspectable public var verticalPadding: CGFloat = 2
     
-    public var collectionView: UICollectionView?
+    private var collectionView: UICollectionView?
     
+    public var layout: UICollectionViewLayout = UICollectionViewLeftAlignedLayout() {
+        didSet {
+            collectionView?.removeFromSuperview()
+            setUp()
+            setNeedsLayout()
+        }
+    }
+
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.tags = ["This", "is","a", "demo","for", "storyboard",".", "Please","make", "an","outlet", "and", "specify", "your", "own", "tags"]
@@ -54,7 +62,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     private func setUp() {
-        collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: UICollectionViewLeftAlignedLayout())
+        collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         collectionView?.delegate = self
         collectionView?.dataSource = self
         collectionView?.showsHorizontalScrollIndicator = false
