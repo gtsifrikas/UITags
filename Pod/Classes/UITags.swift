@@ -25,6 +25,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     
     @IBInspectable public var horizontalPadding: CGFloat = 3
     @IBInspectable public var verticalPadding: CGFloat = 2
+
     
     private var collectionView: UICollectionView?
     
@@ -99,6 +100,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
             print("Could not load UITagCollectionViewCell..")
             return UICollectionViewCell()
         }
+        cellToConfigure.cornerRadius = self.tagCornerRadius
         cellToConfigure.fontFamily = self.fontFamily
         cellToConfigure.fontSize = self.fontSize
         cellToConfigure.textColor = self.selectedTags.contains(indexPath.row) ? self.textColorSelected : self.textColor
