@@ -26,7 +26,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     @IBInspectable var horizontalPadding: CGFloat = 3
     @IBInspectable var verticalPadding: CGFloat = 2
     
-    public var collectionView:UICollectionView?
+    public var collectionView: UICollectionView?
 
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
@@ -41,7 +41,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         }
     }
     
-    public var selectedTags:[Int] = []
+    public var selectedTags = [Int]()
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
