@@ -25,7 +25,7 @@ import UICollectionViewLeftAlignedLayout
     @IBInspectable var horizontalPadding:CGFloat = 3
     @IBInspectable var verticalPadding:CGFloat = 2
     
-    private var collectionView:UICollectionView?
+    public var collectionView:UICollectionView?
 
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
@@ -40,7 +40,7 @@ import UICollectionViewLeftAlignedLayout
         }
     }
     
-    private var selectedTags:[Int] = []
+    public var selectedTags:[Int] = []
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
