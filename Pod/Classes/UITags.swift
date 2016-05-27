@@ -9,25 +9,25 @@
 import UIKit
 import UICollectionViewLeftAlignedLayout
 
-@IBDesignable 
+@IBDesignable
 public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    @IBInspectable var tagColor: UIColor?
-    @IBInspectable var tagSelectedColor: UIColor?
+    @IBInspectable public var tagColor: UIColor?
+    @IBInspectable public var tagSelectedColor: UIColor?
     
-    @IBInspectable var fontSize: CGFloat = 11.0
-    @IBInspectable var fontFamily = "System"
-    @IBInspectable var textColor: UIColor?
-    @IBInspectable var textColorSelected: UIColor?
+    @IBInspectable public var fontSize: CGFloat = 11.0
+    @IBInspectable public var fontFamily = "System"
+    @IBInspectable public var textColor: UIColor?
+    @IBInspectable public var textColorSelected: UIColor?
     
-    @IBInspectable var tagHorizontalDistance: CGFloat = 2
-    @IBInspectable var tagVerticalDistance: CGFloat = 3
+    @IBInspectable public var tagHorizontalDistance: CGFloat = 2
+    @IBInspectable public var tagVerticalDistance: CGFloat = 3
     
-    @IBInspectable var horizontalPadding: CGFloat = 3
-    @IBInspectable var verticalPadding: CGFloat = 2
+    @IBInspectable public var horizontalPadding: CGFloat = 3
+    @IBInspectable public var verticalPadding: CGFloat = 2
     
     public var collectionView: UICollectionView?
-
+    
     override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.tags = ["This", "is","a", "demo","for", "storyboard",".", "Please","make", "an","outlet", "and", "specify", "your", "own", "tags"]
@@ -63,11 +63,13 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         collectionView?.registerClass(UITagCollectionViewCell.self, forCellWithReuseIdentifier: "tagCell")
         if let collectionView = collectionView {
             self.addSubview(collectionView)
+            self.layoutSubviews()
         }
     }
     
     private func createTags() {
         collectionView?.reloadData()
+        collectionView?.layoutSubviews()
     }
     
     override public func layoutSubviews() {
@@ -139,7 +141,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
             self.selectedTags += [indexPath.row]
             self.delegate?.tagSelected(atIndex: indexPath.row)
         }
-                
+        
         self.configureCell(self.collectionView!.cellForItemAtIndexPath(indexPath)!, cellForItemAtIndexPath: indexPath)
     }
 }
