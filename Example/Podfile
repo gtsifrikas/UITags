@@ -7,6 +7,4 @@ end
 
 target 'UITags_Tests' do
   pod "UITags", :path => "../"
-
-  pod 'FBSnapshotTestCase'
 end
