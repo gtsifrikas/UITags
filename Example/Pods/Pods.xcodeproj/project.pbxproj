@@ -9,22 +9,21 @@
 /* Begin PBXBuildFile section */
 		1DD79356F987E62FC78A5B7C6259507D /* UITags-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F2085AFEE0D2199B96D97C0063BB91 /* UITags-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E1C341805D8BBCF46D401C8AEF2ADEE /* UICollectionViewLeftAlignedLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68114B31A32562317AB57B6356078010 /* UICollectionViewLeftAlignedLayout-dummy.m */; };
+		1FF190F85923A5D9A616807032595232 /* UITagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8BE4702F59137EE2E27A8F8AD73B6 /* UITagCollectionViewCell.swift */; };
+		2A7BD254208667C26A7E44E541573B5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22594A40B782D4566C8DBF9CE562DFA /* Extensions.swift */; };
 		316D39EE6B893F1C23553523560748D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D8CD0273D94DB73DB0A617766B292F /* Foundation.framework */; };
+		3820968E22AE85D5CDFFF0C50EDD0E55 /* UITags-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A5B6AE7DBF0DA3FD976D83BC6C2A92 /* UITags-dummy.m */; };
 		3CE3D4A5F31997AB2E119B59E37785E3 /* UICollectionViewLeftAlignedLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F60F38DC5315C8D87E4B1DF795C442 /* UICollectionViewLeftAlignedLayout.framework */; };
 		3D078398AD00D7A85DFA306E8D980B0A /* UICollectionViewLeftAlignedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C7AF587A0D9F10A2270ED69EA1DDC3A1 /* UICollectionViewLeftAlignedLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60CCEF9A2FB391EC32D0D2F9D0AF6E19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75569BE6632899EC7C3001974EE36C5E /* Extensions.swift */; };
 		611A1413B77D609ABFC232B92393EA0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D8CD0273D94DB73DB0A617766B292F /* Foundation.framework */; };
 		6341884D6B4DABD4E5F905140D2CF1E3 /* UICollectionViewLeftAlignedLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 621816FD7AF5AFAD3F52221F1095A169 /* UICollectionViewLeftAlignedLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B149C809A6D280A41E6276D42D13FB9 /* Pods-UITags_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E9034A93569E17B9F8787CC72D49E2 /* Pods-UITags_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7202F245FDEB2E6F69559B38F6C01004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D8CD0273D94DB73DB0A617766B292F /* Foundation.framework */; };
-		72A0533E179632510487CA0805E378DC /* UITags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9094B8DC8CF2D0DA70E50FBE90DA95EB /* UITags.swift */; };
 		9F2BBB26987C991041C9324462A2EF7E /* UICollectionViewLeftAlignedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5464D8616CD270F0126FE06EC1726 /* UICollectionViewLeftAlignedLayout.m */; };
-		B6FE642872DF8AF116261AD32BDE2C51 /* UITags.swift.orig in Sources */ = {isa = PBXBuildFile; fileRef = 8D7FC65C000CE7BACFE75212369BA2DF /* UITags.swift.orig */; };
-		C1C4BA01623036912D11BBD4B0016914 /* UITags-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A5B6AE7DBF0DA3FD976D83BC6C2A92 /* UITags-dummy.m */; };
 		C1C4CA79E3AB587D59982DC08272B8D7 /* UITags.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04857EE4C879052D0AC6DD707CC78858 /* UITags.bundle */; };
 		C762A7BDF1ABEFC423D7ED1F67874D84 /* Pods-UITags_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C74B83A17662169EBFF0A5C5EA1AB68 /* Pods-UITags_Tests-dummy.m */; };
 		D3D1AE90BD3212A418BD16EAA5530447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D8CD0273D94DB73DB0A617766B292F /* Foundation.framework */; };
-		D78E8E9D06EBD1CA5DE82DC166E0BF1F /* UITagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E46C717D05FC516D40C2C7B4C9D4827 /* UITagCollectionViewCell.swift */; };
+		E2E932C1DE5CEDE366987DCBFACD35C1 /* UITags.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C9C5B168409934E9C9A7D8ECE2A74D /* UITags.swift */; };
 		E725B8FAA202BD7367958DCC73F80F78 /* Pods-UITags_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DD408C08571AD7884E5A75A2110561 /* Pods-UITags_Example-dummy.m */; };
 		F006B616870A2016AA3E4C3F73A59D7A /* Pods-UITags_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 223D1D1CB5263D91B01272F685013E3A /* Pods-UITags_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -91,16 +90,13 @@
 		588A99E988F86FA2BFF0454E078CD72E /* UICollectionViewLeftAlignedLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICollectionViewLeftAlignedLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59933C828E04DBD5C48B2E351DAECFAF /* Pods-UITags_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UITags_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		5AA8B62A5D34375C07E8A82832F5D7AE /* UITags.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UITags.xcconfig; sourceTree = "<group>"; };
-		5E46C717D05FC516D40C2C7B4C9D4827 /* UITagCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITagCollectionViewCell.swift; sourceTree = "<group>"; };
 		621816FD7AF5AFAD3F52221F1095A169 /* UICollectionViewLeftAlignedLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewLeftAlignedLayout-umbrella.h"; sourceTree = "<group>"; };
 		658777B7986B1896858150AF73F35B27 /* Pods-UITags_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UITags_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		68114B31A32562317AB57B6356078010 /* UICollectionViewLeftAlignedLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewLeftAlignedLayout-dummy.m"; sourceTree = "<group>"; };
 		69086346DA3F786BE208F80843665218 /* Pods_UITags_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITags_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75569BE6632899EC7C3001974EE36C5E /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6FA8BE4702F59137EE2E27A8F8AD73B6 /* UITagCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITagCollectionViewCell.swift; sourceTree = "<group>"; };
 		8793AD11989BF576DB3254C929025491 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D7FC65C000CE7BACFE75212369BA2DF /* UITags.swift.orig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = UITags.swift.orig; sourceTree = "<group>"; };
 		8E8988984726ED69AFC31A7588387FB9 /* UITags-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITags-prefix.pch"; sourceTree = "<group>"; };
-		9094B8DC8CF2D0DA70E50FBE90DA95EB /* UITags.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITags.swift; sourceTree = "<group>"; };
 		9326481CE4E44A9DFD3358BD218444E0 /* Pods-UITags_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UITags_Example.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9CC9B030D44206482FC0792F547332C1 /* Pods-UITags_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UITags_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -110,6 +106,7 @@
 		C1F60F38DC5315C8D87E4B1DF795C442 /* UICollectionViewLeftAlignedLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICollectionViewLeftAlignedLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7AF587A0D9F10A2270ED69EA1DDC3A1 /* UICollectionViewLeftAlignedLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICollectionViewLeftAlignedLayout.h; path = UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.h; sourceTree = "<group>"; };
 		C9CA11AB52176B1348972ED0AADAF69E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D22594A40B782D4566C8DBF9CE562DFA /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D27A075CB313FA8F7E578ADFB998F829 /* UITags.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITags.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7D8CD0273D94DB73DB0A617766B292F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DA5A67923DA6D43A68FA4D77573DB14D /* Pods-UITags_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UITags_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -118,6 +115,7 @@
 		E8356422243A3BC6C05927B7322FDD32 /* Pods-UITags_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UITags_Example-resources.sh"; sourceTree = "<group>"; };
 		E8A6B1D47B7290E41DBA761E1FCAC791 /* UITags.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = UITags.modulemap; sourceTree = "<group>"; };
 		F4FA52068C70DA7D89C2BC46C436E7B1 /* Pods_UITags_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITags_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C9C5B168409934E9C9A7D8ECE2A74D /* UITags.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITags.swift; sourceTree = "<group>"; };
 		F8A5B6AE7DBF0DA3FD976D83BC6C2A92 /* UITags-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITags-dummy.m"; sourceTree = "<group>"; };
 		F9DD408C08571AD7884E5A75A2110561 /* Pods-UITags_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UITags_Example-dummy.m"; sourceTree = "<group>"; };
 		FCA7C552F965277635445394171D7536 /* Pods-UITags_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UITags_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -215,6 +213,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6870F27517D0C60E7B1EE0A5C7E67146 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B387C2C702DE727FB8450138F330FF58 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -245,33 +251,14 @@
 			path = "Target Support Files/Pods-UITags_Tests";
 			sourceTree = "<group>";
 		};
-		8BB23437DFCE62284665EFA0388382FA /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8D50F3EBA4CB68644E0F4953CD960360 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
 		8BF74237504FD1DC1196660190958FE2 /* UITags */ = {
 			isa = PBXGroup;
 			children = (
-				8BB23437DFCE62284665EFA0388382FA /* Pod */,
+				6870F27517D0C60E7B1EE0A5C7E67146 /* Pod */,
 				D133B35015DDDF39C6079807DE6C2FB4 /* Support Files */,
 			);
 			name = UITags;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		8D50F3EBA4CB68644E0F4953CD960360 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				75569BE6632899EC7C3001974EE36C5E /* Extensions.swift */,
-				5E46C717D05FC516D40C2C7B4C9D4827 /* UITagCollectionViewCell.swift */,
-				9094B8DC8CF2D0DA70E50FBE90DA95EB /* UITags.swift */,
-				8D7FC65C000CE7BACFE75212369BA2DF /* UITags.swift.orig */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		9D12F9E804D203E395686411AA791148 /* iOS */ = {
@@ -288,6 +275,16 @@
 				8BF74237504FD1DC1196660190958FE2 /* UITags */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B387C2C702DE727FB8450138F330FF58 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D22594A40B782D4566C8DBF9CE562DFA /* Extensions.swift */,
+				6FA8BE4702F59137EE2E27A8F8AD73B6 /* UITagCollectionViewCell.swift */,
+				F5C9C5B168409934E9C9A7D8ECE2A74D /* UITags.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		B568420A08E67677EB6982D78C771DB1 /* Frameworks */ = {
@@ -434,7 +431,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFF57EFF23D8238D85FD15C84C5C367F /* Build configuration list for PBXNativeTarget "UITags" */;
 			buildPhases = (
-				6F5EB9899B488B572E9606CC6B78303E /* Sources */,
+				9FD29EA966FF702E688C319FC649BD77 /* Sources */,
 				F9E91A5D4D38F2068454B77FF8078D03 /* Frameworks */,
 				8AEE4976F4D374662E61E4AF79223075 /* Resources */,
 				D41E301ABB3939553619C68C40A95C48 /* Headers */,
@@ -518,22 +515,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6F5EB9899B488B572E9606CC6B78303E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60CCEF9A2FB391EC32D0D2F9D0AF6E19 /* Extensions.swift in Sources */,
-				D78E8E9D06EBD1CA5DE82DC166E0BF1F /* UITagCollectionViewCell.swift in Sources */,
-				C1C4BA01623036912D11BBD4B0016914 /* UITags-dummy.m in Sources */,
-				72A0533E179632510487CA0805E378DC /* UITags.swift in Sources */,
-				B6FE642872DF8AF116261AD32BDE2C51 /* UITags.swift.orig in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		87677C896B8C5C9AB6FA53A8267C382A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FD29EA966FF702E688C319FC649BD77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7BD254208667C26A7E44E541573B5B /* Extensions.swift in Sources */,
+				1FF190F85923A5D9A616807032595232 /* UITagCollectionViewCell.swift in Sources */,
+				3820968E22AE85D5CDFFF0C50EDD0E55 /* UITags-dummy.m in Sources */,
+				E2E932C1DE5CEDE366987DCBFACD35C1 /* UITags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
