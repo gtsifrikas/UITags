@@ -28,7 +28,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     @IBInspectable public var tagCornerRadius: CGFloat = 3
 
     
-    private var collectionView: UICollectionView?
+    public var collectionView: UICollectionView?
     
     public var layout: UICollectionViewLayout = UICollectionViewLeftAlignedLayout() {
         didSet {
