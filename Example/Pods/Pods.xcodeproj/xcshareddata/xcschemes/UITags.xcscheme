@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6D1199C74A1FC6EB607E5075'
+               BlueprintIdentifier = 'CA6FF7A1B9348979017639F96C1DBD93'
                BlueprintName = 'UITags'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'UITags.framework'>

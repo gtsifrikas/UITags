@@ -1,11 +1,11 @@
 PODS:
-  - FBSnapshotTestCase (2.0.7):
-    - FBSnapshotTestCase/SwiftSupport (= 2.0.7)
-  - FBSnapshotTestCase/Core (2.0.7)
-  - FBSnapshotTestCase/SwiftSupport (2.0.7):
+  - FBSnapshotTestCase (2.1.0):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.0)
+  - FBSnapshotTestCase/Core (2.1.0)
+  - FBSnapshotTestCase/SwiftSupport (2.1.0):
     - FBSnapshotTestCase/Core
-  - UICollectionViewLeftAlignedLayout (1.0.1)
-  - UITags (0.1.0):
+  - UICollectionViewLeftAlignedLayout (1.0.2)
+  - UITags (0.1.2):
     - UICollectionViewLeftAlignedLayout
 
 DEPENDENCIES:
@@ -14,11 +14,13 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   UITags:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
-  UICollectionViewLeftAlignedLayout: 6d10790db3e07958d91bd910d8b8e9dad952b1ef
-  UITags: 2a696883f30bc681028bdd59851cbae03ddfeda7
+  FBSnapshotTestCase: 366ecd378511d7716c79991cd8067d1eed23578d
+  UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
+  UITags: 1cbb06ecaa06384a54d4fff4e126c0c56515ac1f
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 6a6f03e1c523746775a6573a06e12716a4c73e0e
+
+COCOAPODS: 1.0.0.beta.8
