@@ -47,6 +47,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     
     public var tags: [String] = [] {
         didSet {
+            self.selectedTags.removeAll()
             self.createTags()
         }
     }
