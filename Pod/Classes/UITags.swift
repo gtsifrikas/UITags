@@ -12,6 +12,7 @@ import UICollectionViewLeftAlignedLayout
 @IBDesignable
 public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    @IBInspectable public var multipleSelection: Bool = false
     @IBInspectable public var tagColor: UIColor?
     @IBInspectable public var tagSelectedColor: UIColor?
     
@@ -105,8 +106,13 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         cellToConfigure.cornerRadius = self.tagCornerRadius
         cellToConfigure.fontFamily = self.fontFamily
         cellToConfigure.fontSize = self.fontSize
-        cellToConfigure.textColor = self.selectedTags.contains(indexPath.row) ? self.textColorSelected : self.textColor
-        cellToConfigure.contentView.backgroundColor = self.selectedTags.contains(indexPath.row) ? self.tagSelectedColor : self.tagColor
+        if multipleSelection {
+            cellToConfigure.textColor = self.selectedTags.contains(indexPath.row) ? self.textColorSelected : self.textColor
+            cellToConfigure.contentView.backgroundColor = self.selectedTags.contains(indexPath.row) ? self.tagSelectedColor : self.tagColor
+        } else {
+            cellToConfigure.textColor = self.textColor
+            cellToConfigure.contentView.backgroundColor = self.tagColor
+        }
         cellToConfigure.title = self.tags[indexPath.row]
         return cellToConfigure
     }
@@ -146,15 +152,39 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     //MARK: - collection view delegate implementation
     
     public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        if self.selectedTags.contains(indexPath.row) {
-            self.selectedTags.removeObject(indexPath.row)
-            self.delegate?.tagDeselected(atIndex: indexPath.row)
+        if multipleSelection {
+            if self.selectedTags.contains(indexPath.row) {
+                self.selectedTags.removeObject(indexPath.row)
+                self.delegate?.tagDeselected(atIndex: indexPath.row)
+            } else {
+                self.selectedTags += [indexPath.row]
+                self.delegate?.tagSelected(atIndex: indexPath.row)
+            }
         } else {
-            self.selectedTags += [indexPath.row]
             self.delegate?.tagSelected(atIndex: indexPath.row)
         }
+    }
+    
+    public func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        if multipleSelection {
+            return
+        }
+        let cell = self.collectionView!.cellForItemAtIndexPath(indexPath)!
         
-        self.configureCell(self.collectionView!.cellForItemAtIndexPath(indexPath)!, cellForItemAtIndexPath: indexPath)
+        UIView.animateWithDuration(0.5) {
+            cell.backgroundColor = self.tagSelectedColor
+        }
+    }
+    
+    public func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        if multipleSelection {
+            return
+        }
+        let cell = self.collectionView!.cellForItemAtIndexPath(indexPath)!
+        
+        UIView.animateWithDuration(0.5) {
+            cell.backgroundColor = self.tagColor
+        }
     }
 }
 
