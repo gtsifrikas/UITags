@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "UITags"
-s.version          = "0.1.3"
+s.version          = "0.1.4"
 s.summary          = "Tags used for category based filtering of for multiple selection"
 
 # This description is used to generate tags and improve search results.
