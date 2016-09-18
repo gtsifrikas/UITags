@@ -64,6 +64,8 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         setUp()
     }
     
+    private var contentHeight: CGFloat = 0.0
+    
     private func setUp() {
         collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         collectionView?.delegate = self
@@ -80,12 +82,20 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     
     private func createTags() {
         collectionView?.reloadData()
-        collectionView?.layoutSubviews()
+        layoutSubviews()
+    }
+    
+    public override func intrinsicContentSize() -> CGSize {
+        let size = CGSize(width: frame.width, height: contentHeight)
+        return size
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         collectionView?.frame = bounds
+        collectionView?.layoutSubviews()
+        contentHeight = calculatedHeight()
+        invalidateIntrinsicContentSize()
     }
     
     //MARK: - collection view dataSource implemantation
@@ -124,6 +134,35 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         size.width += 2 * horizontalPadding
         
         return size
+    }
+    
+    private func calculatedHeight() -> CGFloat {
+        var totalHeight: CGFloat = 0
+        
+        let numberOfTags = collectionView!.numberOfItemsInSection(0)
+        
+        let maximumRowWidth = frame.size.width
+        
+        var currentRowWidth: CGFloat = 0.0
+        for var tagIndex in 0..<numberOfTags {
+            
+            var cellSize = sizeForCellAt(NSIndexPath(forItem: tagIndex, inSection: 0))
+            cellSize.height += tagVerticalDistance
+            cellSize.width += tagHorizontalDistance
+            
+            if currentRowWidth == 0 {
+                totalHeight += cellSize.height
+            }
+            
+            currentRowWidth += cellSize.width
+            
+            if maximumRowWidth - currentRowWidth < cellSize.width {
+                currentRowWidth = 0
+                tagIndex -= 1
+                continue
+            }
+        }
+        return totalHeight
     }
     
     //MARK: - collectionview flow layout delegate implementation
