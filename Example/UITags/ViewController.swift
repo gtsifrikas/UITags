@@ -21,6 +21,8 @@ class ViewController: UIViewController, UITagsViewDelegate {
         dispatch_after(delayTime, dispatch_get_main_queue()) {
             self.tags.tags = ["These", "are", "some", "tags","Please", "specify", "an", "outlet","and", "also", "set", "the","delegate", "if", "you", "want","to", "be", "tappable", "more ","tags", "to", "show", "intrinstinct","size"]
         }
+        
+        self.tags.setCustomColor(color: .cyan, selectedColor: .brown, position: 2)
     }
 
     override func didReceiveMemoryWarning() {
