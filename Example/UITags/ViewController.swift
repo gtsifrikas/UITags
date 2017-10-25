@@ -17,10 +17,10 @@ class ViewController: UIViewController, UITagsViewDelegate {
         self.tags.delegate = self
         self.tags.tags = ["These", "are", "some", "tags","Please", "specify", "an", "outlet","and", "also", "set", "the","delegate", "if", "you", "want","to", "be", "tappable"]
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+//        let delayTime = DispatchTime.now()
+//        dispatch_after(dispatch_time_t(), Int64(2 * Double(NSEC_PER_SEC))) {
             self.tags.tags = ["These", "are", "some", "tags","Please", "specify", "an", "outlet","and", "also", "set", "the","delegate", "if", "you", "want","to", "be", "tappable", "more ","tags", "to", "show", "intrinstinct","size"]
-        }
+//        }
         
         self.tags.setCustomColor(color: .cyan, selectedColor: .brown, position: 2)
     }
