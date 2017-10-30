@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "UITags"
-s.version          = "0.1.4"
+s.version          = "0.1.5"
 s.summary          = "Tags used for category based filtering of for multiple selection"
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ s.description      = "UITags can be used if you have a list a you want to filter
 s.homepage         = "https://github.com/gtsif21/UITags"
 # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
 s.license          = 'MIT'
-s.author           = { "George Tsifrikas" => "gtsifrikas@gmail.com" }
+s.author           = { "George Tsifrikas" => "gtsifrikas@gmail.com", "Fernando Valle" => "fernandovalle.developer@gmail.com",  }
 s.source           = { :git => "https://github.com/gtsif21/UITags.git", :tag => s.version.to_s }
 s.social_media_url = 'https://twitter.com/gtsifrikas'
 

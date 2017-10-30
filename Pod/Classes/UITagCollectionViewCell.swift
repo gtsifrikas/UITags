@@ -3,6 +3,7 @@
 //  Pods
 //
 //  Created by George Tsifrikas on 06/12/15.
+//  Edited by Fernando Valle on 22/10/16.
 //
 //
 
@@ -14,7 +15,7 @@ class UITagCollectionViewCell: UICollectionViewCell {
         didSet {
             self.titleLabelRef?.font = UIFont(name: fontFamily, size: fontSize)
             self.titleLabelRef?.textColor = textColor
-            self.titleLabelRef?.textAlignment = .Center
+            self.titleLabelRef?.textAlignment = .center
             self.titleLabelRef?.text = title
         }
     }
@@ -23,7 +24,7 @@ class UITagCollectionViewCell: UICollectionViewCell {
     var textColor: UIColor?
     var cornerRadius: CGFloat = 3.0
     
-    private weak var titleLabelRef: UILabel?
+    fileprivate weak var titleLabelRef: UILabel?
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -45,7 +46,7 @@ class UITagCollectionViewCell: UICollectionViewCell {
         titleLabelRef = titleLabel
         titleLabelRef?.font = UIFont(name: fontFamily, size: fontSize)
         titleLabelRef?.textColor = textColor
-        titleLabelRef?.textAlignment = .Center
+        titleLabelRef?.textAlignment = .center
         contentView.addSubview(titleLabel)
     }
     
