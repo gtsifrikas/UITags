@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import UITags
+@testable import UITags
 
 class Tests: XCTestCase {
     
