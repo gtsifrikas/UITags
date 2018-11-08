@@ -1,10 +1,14 @@
 PODS:
   - UICollectionViewLeftAlignedLayout (1.0.2)
-  - UITags (0.1.2):
+  - UITags (0.1.4):
     - UICollectionViewLeftAlignedLayout
 
 DEPENDENCIES:
   - UITags (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - UICollectionViewLeftAlignedLayout
 
 EXTERNAL SOURCES:
   UITags:
@@ -12,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
-  UITags: 1cbb06ecaa06384a54d4fff4e126c0c56515ac1f
+  UITags: 184a138fc255efbeb60aeafcac95adf884d8f3f9
 
 PODFILE CHECKSUM: 9d4a6efab549e68fdbe8cd8df07aa992c6804c7d
 
-COCOAPODS: 1.0.0.beta.8
+COCOAPODS: 1.5.3

@@ -14,7 +14,7 @@ class UITagCollectionViewCell: UICollectionViewCell {
         didSet {
             self.titleLabelRef?.font = UIFont(name: fontFamily, size: fontSize)
             self.titleLabelRef?.textColor = textColor
-            self.titleLabelRef?.textAlignment = .Center
+            self.titleLabelRef?.textAlignment = .center
             self.titleLabelRef?.text = title
         }
     }
@@ -45,7 +45,7 @@ class UITagCollectionViewCell: UICollectionViewCell {
         titleLabelRef = titleLabel
         titleLabelRef?.font = UIFont(name: fontFamily, size: fontSize)
         titleLabelRef?.textColor = textColor
-        titleLabelRef?.textAlignment = .Center
+        titleLabelRef?.textAlignment = .center
         contentView.addSubview(titleLabel)
     }
     

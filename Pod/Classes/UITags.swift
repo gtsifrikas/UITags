@@ -72,8 +72,8 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         collectionView?.dataSource = self
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.showsVerticalScrollIndicator = false
-        collectionView?.backgroundColor = UIColor.clearColor()
-        collectionView?.registerClass(UITagCollectionViewCell.self, forCellWithReuseIdentifier: "tagCell")
+        collectionView?.backgroundColor = UIColor.clear
+        collectionView?.register(UITagCollectionViewCell.self, forCellWithReuseIdentifier: "tagCell")
         if let collectionView = collectionView {
             self.addSubview(collectionView)
             self.layoutSubviews()
@@ -85,7 +85,7 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         layoutSubviews()
     }
     
-    public override func intrinsicContentSize() -> CGSize {
+    public override var intrinsicContentSize: CGSize {
         let size = CGSize(width: frame.width, height: contentHeight)
         return size
     }
@@ -99,15 +99,15 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     //MARK: - collection view dataSource implemantation
-    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tags.count
     }
     
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return configureCell(collectionView.dequeueReusableCellWithReuseIdentifier("tagCell", forIndexPath: indexPath), cellForItemAtIndexPath: indexPath)
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return configureCell(cell: collectionView.dequeueReusableCell(withReuseIdentifier: "tagCell", for: indexPath), cellForItemAtIndexPath: indexPath)
     }
     
-    private func configureCell(cell: UICollectionViewCell, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    private func configureCell(cell: UICollectionViewCell, cellForItemAtIndexPath indexPath: IndexPath) -> UICollectionViewCell {
         guard let cellToConfigure = cell as? UITagCollectionViewCell else {
             print("Could not load UITagCollectionViewCell..")
             return UICollectionViewCell()
@@ -122,14 +122,14 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     //MARK: - util methods
-    private func sizeForCellAt(indexPath:NSIndexPath) -> CGSize {
+    private func sizeForCellAt(indexPath: IndexPath) -> CGSize {
         let tempLabel = UILabel()
         tempLabel.text = self.tags[indexPath.row]
         tempLabel.font = UIFont(name: fontFamily, size: fontSize)
         tempLabel.textColor = textColor
-        tempLabel.textAlignment = .Center
+        tempLabel.textAlignment = .center
         
-        var size = tempLabel.sizeThatFits(CGSize(width: CGFloat.max, height: CGFloat.max))
+        var size = tempLabel.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
         size.height += 2 * verticalPadding
         size.width += 2 * horizontalPadding
         
@@ -139,14 +139,14 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     private func calculatedHeight() -> CGFloat {
         var totalHeight: CGFloat = 0
         
-        let numberOfTags = collectionView!.numberOfItemsInSection(0)
+        let numberOfTags = collectionView!.numberOfItems(inSection: 0)
         
         let maximumRowWidth = frame.size.width
         
         var currentRowWidth: CGFloat = 0.0
         for var tagIndex in 0..<numberOfTags {
             
-            var cellSize = sizeForCellAt(NSIndexPath(forItem: tagIndex, inSection: 0))
+            var cellSize = sizeForCellAt(indexPath: IndexPath(item: tagIndex, section: 0))
             cellSize.height += tagVerticalDistance
             cellSize.width += tagHorizontalDistance
             
@@ -166,47 +166,43 @@ public class UITags: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     //MARK: - collectionview flow layout delegate implementation
-    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return sizeForCellAt(indexPath)
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return sizeForCellAt(indexPath: indexPath)
     }
     
-    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return self.tagHorizontalDistance
     }
     
-    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return self.tagVerticalDistance
     }
     
-    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsZero
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
     }
     
     //MARK: - collection view delegate implementation
     
-    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if self.selectedTags.contains(indexPath.row) {
-            self.selectedTags.removeObject(indexPath.row)
+            self.selectedTags.removeObject(object: indexPath.row)
             self.delegate?.tagDeselected(atIndex: indexPath.row)
         } else {
             self.selectedTags += [indexPath.row]
             self.delegate?.tagSelected(atIndex: indexPath.row)
         }
         
-        self.configureCell(self.collectionView!.cellForItemAtIndexPath(indexPath)!, cellForItemAtIndexPath: indexPath)
+        let _ = self.configureCell(cell: collectionView.cellForItem(at: indexPath)!, cellForItemAtIndexPath: indexPath)
     }
 }
 
 private extension Array where Element: Equatable {
     mutating func removeObject(object: Element) {
-        if let index = self.indexOf(object) {
-            self.removeAtIndex(index)
-        }
-    }
-    
-    mutating func removeObjectsInArray(array: [Element]) {
-        for object in array {
-            self.removeObject(object)
+        for (index, obj) in self.enumerated() {
+            if object == obj {
+                self.remove(at: index)
+            }
         }
     }
 }
